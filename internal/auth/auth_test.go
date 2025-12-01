@@ -1,7 +1,8 @@
 package auth
+
 import (
-	"testing"
 	"net/http"
+	"testing"
 )
 
 func TestApiKey(t *testing.T) {
@@ -20,7 +21,7 @@ func TestApiKey(t *testing.T) {
 			wantedErr: false,
 		},
 		{
-			name: "missing authorization header",
+			name:      "missing authorization header",
 			header:    http.Header{},
 			want:      "",
 			wantedErr: true,
